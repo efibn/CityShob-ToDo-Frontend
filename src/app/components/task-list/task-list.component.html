@@ -1,0 +1,22 @@
+<!-- src/app/components/task-list/task-list.component.html -->
+<div class="task-list-container">
+    <button mat-raised-button color="primary" (click)="openAddDialog()">Add Task</button>
+    <mat-list>
+      <mat-list-item *ngFor="let task of tasks">
+        <div class="task-item">
+          <span [ngClass]="{'completed': task.completed}">
+            {{ task.title }}
+          </span>
+          <div class="actions">
+            <button mat-icon-button (click)="openEditDialog(task)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deleteTask(task)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  
