@@ -46,6 +46,7 @@ Thumbs.db
 
 # Env
 .env
+package-lock.json
 
 # Logs
 logs
